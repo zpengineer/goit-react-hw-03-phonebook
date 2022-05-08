@@ -4,6 +4,10 @@ import PropTypes from 'prop-types';
 import styles from './Phonebook.module.css';
 
 class Phonebook extends Component {
+  static propTypes = {
+    onSubmit: PropTypes.func.isRequired,
+  };
+
   state = {
     name: '',
     number: '',
@@ -66,9 +70,5 @@ class Phonebook extends Component {
     );
   }
 }
-
-Phonebook.propTypes = {
-  onSubmit: PropTypes.func.isRequired,
-};
 
 export default Phonebook;
